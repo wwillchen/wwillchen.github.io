@@ -75,16 +75,20 @@ main {
 
 .nav-links a { text-decoration: none; }
 
-/* Intro: portrait column + bio */
+/* Intro: bio + portrait column (portrait on the right) */
 
 .intro {
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 210px;
+  grid-template-areas: "bio photo";
   gap: 44px;
   align-items: start;
   padding-bottom: 44px;
   border-bottom: 1px solid var(--border);
 }
+
+.intro-photo { grid-area: photo; }
+.intro-bio { grid-area: bio; }
 
 .portrait {
   display: block;
@@ -329,10 +333,13 @@ section p:last-child { margin-bottom: 0; }
 
   .site-nav { margin-bottom: 40px; }
 
-  .intro,
   section { grid-template-columns: 1fr; }
 
-  .intro { gap: 28px; }
+  .intro {
+    grid-template-columns: 1fr;
+    grid-template-areas: "photo" "bio";
+    gap: 28px;
+  }
 
   .portrait { width: min(56vw, 220px); }
 
