@@ -76,7 +76,10 @@ h1, h2, h3 {
 }
 
 .intro-bio { grid-area: bio; }
-.intro-photo { grid-area: photo; }
+.intro-photo {
+  grid-area: photo;
+  padding-top: 28px;
+}
 
 .name {
   font-size: 1.12rem;
@@ -330,6 +333,8 @@ section p:last-child { margin-bottom: 0; }
     gap: 24px;
     padding-bottom: 40px;
   }
+
+  .intro-photo { padding-top: 0; }
 
   .portrait { width: 132px; }
 
